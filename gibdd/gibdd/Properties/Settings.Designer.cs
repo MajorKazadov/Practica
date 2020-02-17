@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BDForms.Properties
+namespace gibdd.Properties
 {
 
 
