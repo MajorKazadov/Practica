@@ -45,9 +45,9 @@
             this.registrationStreet = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.liveStreet = new System.Windows.Forms.TextBox();
+            this.lifeStreet = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.liveCity = new System.Windows.Forms.TextBox();
+            this.lifeCity = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.job = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -58,12 +58,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.description = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label17 = new System.Windows.Forms.Label();
+            this.addDriver = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(626, 334);
+            this.button1.Location = new System.Drawing.Point(294, 334);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 23);
             this.button1.TabIndex = 0;
@@ -138,7 +143,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 165);
+            this.label5.Location = new System.Drawing.Point(294, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 13);
             this.label5.TabIndex = 9;
@@ -146,7 +151,7 @@
             // 
             // pasport
             // 
-            this.pasport.Location = new System.Drawing.Point(12, 181);
+            this.pasport.Location = new System.Drawing.Point(294, 25);
             this.pasport.Name = "pasport";
             this.pasport.Size = new System.Drawing.Size(207, 20);
             this.pasport.TabIndex = 10;
@@ -154,7 +159,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(297, 25);
+            this.label6.Location = new System.Drawing.Point(291, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 13);
             this.label6.TabIndex = 11;
@@ -162,7 +167,9 @@
             // 
             // registrationCity
             // 
-            this.registrationCity.Location = new System.Drawing.Point(300, 64);
+            this.registrationCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.registrationCity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.registrationCity.Location = new System.Drawing.Point(294, 103);
             this.registrationCity.Name = "registrationCity";
             this.registrationCity.Size = new System.Drawing.Size(207, 20);
             this.registrationCity.TabIndex = 12;
@@ -170,7 +177,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(297, 48);
+            this.label7.Location = new System.Drawing.Point(291, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 13;
@@ -178,7 +185,7 @@
             // 
             // registrationStreet
             // 
-            this.registrationStreet.Location = new System.Drawing.Point(513, 64);
+            this.registrationStreet.Location = new System.Drawing.Point(507, 103);
             this.registrationStreet.Name = "registrationStreet";
             this.registrationStreet.Size = new System.Drawing.Size(207, 20);
             this.registrationStreet.TabIndex = 14;
@@ -186,7 +193,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(510, 48);
+            this.label8.Location = new System.Drawing.Point(504, 87);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 13);
             this.label8.TabIndex = 15;
@@ -195,39 +202,41 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(510, 126);
+            this.label9.Location = new System.Drawing.Point(504, 165);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(118, 13);
             this.label9.TabIndex = 20;
             this.label9.Text = "Улица, дом, квартира";
             // 
-            // liveStreet
+            // lifeStreet
             // 
-            this.liveStreet.Location = new System.Drawing.Point(513, 142);
-            this.liveStreet.Name = "liveStreet";
-            this.liveStreet.Size = new System.Drawing.Size(207, 20);
-            this.liveStreet.TabIndex = 19;
+            this.lifeStreet.Location = new System.Drawing.Point(507, 181);
+            this.lifeStreet.Name = "lifeStreet";
+            this.lifeStreet.Size = new System.Drawing.Size(207, 20);
+            this.lifeStreet.TabIndex = 19;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(297, 126);
+            this.label10.Location = new System.Drawing.Point(291, 165);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 18;
             this.label10.Text = "Город";
             // 
-            // liveCity
+            // lifeCity
             // 
-            this.liveCity.Location = new System.Drawing.Point(300, 142);
-            this.liveCity.Name = "liveCity";
-            this.liveCity.Size = new System.Drawing.Size(207, 20);
-            this.liveCity.TabIndex = 17;
+            this.lifeCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.lifeCity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.lifeCity.Location = new System.Drawing.Point(294, 181);
+            this.lifeCity.Name = "lifeCity";
+            this.lifeCity.Size = new System.Drawing.Size(207, 20);
+            this.lifeCity.TabIndex = 17;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(297, 103);
+            this.label11.Location = new System.Drawing.Point(291, 142);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(103, 13);
             this.label11.TabIndex = 16;
@@ -235,7 +244,7 @@
             // 
             // job
             // 
-            this.job.Location = new System.Drawing.Point(12, 220);
+            this.job.Location = new System.Drawing.Point(12, 181);
             this.job.Name = "job";
             this.job.Size = new System.Drawing.Size(207, 20);
             this.job.TabIndex = 21;
@@ -243,7 +252,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 204);
+            this.label12.Location = new System.Drawing.Point(12, 165);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 13);
             this.label12.TabIndex = 22;
@@ -252,7 +261,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 243);
+            this.label13.Location = new System.Drawing.Point(12, 204);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(65, 13);
             this.label13.TabIndex = 23;
@@ -260,14 +269,14 @@
             // 
             // jobname
             // 
-            this.jobname.Location = new System.Drawing.Point(12, 259);
+            this.jobname.Location = new System.Drawing.Point(12, 220);
             this.jobname.Name = "jobname";
             this.jobname.Size = new System.Drawing.Size(207, 20);
             this.jobname.TabIndex = 24;
             // 
             // mobileNumber
             // 
-            this.mobileNumber.Location = new System.Drawing.Point(12, 298);
+            this.mobileNumber.Location = new System.Drawing.Point(12, 259);
             this.mobileNumber.Name = "mobileNumber";
             this.mobileNumber.Size = new System.Drawing.Size(207, 20);
             this.mobileNumber.TabIndex = 25;
@@ -275,7 +284,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(12, 282);
+            this.label14.Location = new System.Drawing.Point(12, 243);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(112, 13);
             this.label14.TabIndex = 26;
@@ -284,7 +293,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 321);
+            this.label15.Location = new System.Drawing.Point(12, 282);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(32, 13);
             this.label15.TabIndex = 27;
@@ -292,7 +301,7 @@
             // 
             // email
             // 
-            this.email.Location = new System.Drawing.Point(12, 337);
+            this.email.Location = new System.Drawing.Point(12, 298);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(207, 20);
             this.email.TabIndex = 28;
@@ -300,25 +309,61 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(12, 360);
+            this.label16.Location = new System.Drawing.Point(12, 321);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(63, 13);
             this.label16.TabIndex = 29;
             this.label16.Text = "Замечания";
             // 
-            // textBox1
+            // description
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 376);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 20);
-            this.textBox1.TabIndex = 30;
+            this.description.Location = new System.Drawing.Point(12, 337);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(207, 20);
+            this.description.TabIndex = 30;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(294, 204);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "\"Images (*.BMP;*.JPG;*.GIF;*.JPEG)|*.BMP;*.JPG;*.GIF;*.JPEG\"";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(497, 242);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(41, 13);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "label17";
+            // 
+            // addDriver
+            // 
+            this.addDriver.Location = new System.Drawing.Point(546, 334);
+            this.addDriver.Name = "addDriver";
+            this.addDriver.Size = new System.Drawing.Size(140, 23);
+            this.addDriver.TabIndex = 33;
+            this.addDriver.Text = "Добавить пользователя";
+            this.addDriver.UseVisualStyleBackColor = true;
             // 
             // CreateDriverForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(733, 365);
+            this.Controls.Add(this.addDriver);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.description);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.email);
             this.Controls.Add(this.label15);
@@ -329,9 +374,9 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.job);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.liveStreet);
+            this.Controls.Add(this.lifeStreet);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.liveCity);
+            this.Controls.Add(this.lifeCity);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.registrationStreet);
@@ -351,6 +396,8 @@
             this.Controls.Add(this.button1);
             this.Name = "CreateDriverForm";
             this.Text = "CreateDriverForm";
+            this.Load += new System.EventHandler(this.CreateDriverForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,9 +422,9 @@
         private System.Windows.Forms.TextBox registrationStreet;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox liveStreet;
+        private System.Windows.Forms.TextBox lifeStreet;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox liveCity;
+        private System.Windows.Forms.TextBox lifeCity;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox job;
         private System.Windows.Forms.Label label12;
@@ -388,6 +435,10 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox description;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button addDriver;
     }
 }
