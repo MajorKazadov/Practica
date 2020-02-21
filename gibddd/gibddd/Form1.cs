@@ -35,6 +35,7 @@ namespace gibddd
             }
             else
             {
+                MessageBox.Show("Некорректные логин или пароль");
                 Properties.Settings.Default.checkAttemptGlobal++;
                 if (Properties.Settings.Default.checkAttemptGlobal > 2)
                 {

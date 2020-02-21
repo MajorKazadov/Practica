@@ -75,7 +75,7 @@
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(75, 23);
             this.enterButton.TabIndex = 4;
-            this.enterButton.Text = "Enter";
+            this.enterButton.Text = "Войти";
             this.enterButton.UseVisualStyleBackColor = true;
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
